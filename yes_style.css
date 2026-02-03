@@ -3,9 +3,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background: #000 url(waveBg.jpeg) center / cover no-repeat fixed;
-    font-family: 'Arial', sans-serif;
+    background:
+    radial-gradient(
+      circle at top,
+      rgba(255,255,255,0.04),
+      transparent 60%
+    ),
+    #0f1419;
+  	color: #e5e7eb;
+  	margin: 0;
+  	font-family: "Georgia", "Times New Roman", serif;
 }
 
 .container {
@@ -13,8 +20,22 @@ body {
 }
 
 .header_text {
-    font-size: 3em;
-    color: #ffffff;
+    font-size: clamp(1.6rem, 4vw, 3rem);
+  	font-style: italic;
+  	letter-spacing: 0.04em;
+  	text-align: center;
+  	position: relative;
+
+}
+
+.header_text::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -0.6rem;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
 }
 
 .gif_container img {
